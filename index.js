@@ -66,7 +66,7 @@ if(age > 18 && age<21){
     console.log("Go ahead");
 }else{
     console.log('too young');
-} */
+}
  
 
 // DOM - If else - Function practice
@@ -94,4 +94,28 @@ if(age > 18 && age<21){
      title.style.color = BASE_COLOR;
     title.addEventListener("click", handleClick); // 클릭 이벤트 추가
  }
+init();
+*/
+// DOM - If else - Function practice 2
+const title = document.querySelector("#title");
+
+const CLICKED_CLASS = "clicked";
+
+function handleClick(){
+    // Class 추가, 삭제 수동으로 하는 방법
+    /* const hasCLass = title.classList.contains(CLICKED_CLASS);
+    const currentClass = title.className;
+    //if(currentClass !== CLICKED_CLASS){
+    if(!hasCLass){
+       // title.className = CLICKED_CLASS; // 클래스 Name 자체를 바꿈
+       title.classList.add(CLICKED_CLASS); // 클래스 List에 추가해줌
+    }else{
+        //title.className="";
+        title.classList.remove(CLICKED_CLASS);
+    } */
+    title.classList.toggle(CLICKED_CLASS); // CLass 추가, 삭제 토글식
+}
+function init(){
+   title.addEventListener("click", handleClick); // 클릭 이벤트 추가 
+}
 init();
